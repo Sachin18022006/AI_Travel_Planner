@@ -1,0 +1,123 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-display: 'Fraunces', Georgia, serif;
+  --font-body: 'Inter', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+}
+
+html,
+body {
+  background-color: theme('colors.ink.900');
+  color: theme('colors.paper.100');
+}
+
+body {
+  background-image: theme('backgroundImage.grain');
+  background-size: theme('backgroundSize.grain');
+}
+
+::selection {
+  background-color: theme('colors.gold.500');
+  color: theme('colors.ink.950');
+}
+
+
+.ticket-perforation {
+  position: relative;
+  border-top: 2px dashed theme('colors.ink.600');
+}
+.ticket-perforation::before,
+.ticket-perforation::after {
+  content: '';
+  position: absolute;
+  top: -10px;
+  width: 20px;
+  height: 20px;
+  border-radius: 9999px;
+  background: theme('colors.ink.950');
+  border: 2px solid theme('colors.ink.600');
+}
+.ticket-perforation::before {
+  left: -10px;
+}
+.ticket-perforation::after {
+  right: -10px;
+}
+
+.stamp {
+  font-family: var(--font-mono);
+  letter-spacing: 0.08em;
+}
+
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: theme('colors.ink.900');
+}
+::-webkit-scrollbar-thumb {
+  background: theme('colors.ink.600');
+  border-radius: 9999px;
+}
+
+
+.glow-gold,
+.glow-teal,
+.glow-stamp {
+  position: absolute;
+  border-radius: 9999px;
+  filter: blur(90px);
+  pointer-events: none;
+  z-index: 0;
+}
+.glow-gold {
+  background: theme('colors.gold.500');
+  opacity: 0.16;
+}
+.glow-teal {
+  background: theme('colors.teal.500');
+  opacity: 0.14;
+}
+.glow-stamp {
+  background: theme('colors.stamp.500');
+  opacity: 0.1;
+}
+
+
+.card-lift {
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+.card-lift:hover {
+  transform: translateY(-3px);
+  border-color: theme('colors.gold.500');
+  box-shadow: 0 16px 32px -16px rgba(0, 0, 0, 0.6);
+}
+
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.fade-in-up {
+  animation: fade-in-up 0.6s ease both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fade-in-up {
+    animation: none;
+  }
+  .card-lift {
+    transition: none;
+  }
+}
