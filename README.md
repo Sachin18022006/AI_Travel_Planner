@@ -5,8 +5,8 @@ day-by-day activities, a realistic budget breakdown, hotel suggestions, a weathe
 packing checklist, and a live "trip readiness" score — built as a Round 1 full-stack
 engineering assessment.
 
-> **Live demo:** `<add your deployed frontend URL here>`
-> **API:** `<add your deployed backend URL here>`
+> **Live demo:** https://ai-travel-planner-sage.vercel.app
+> **API:** https://ai-travel-planner-74ab.onrender.com
 > **Walkthrough video:** `<add your video link here>`
 
 ---
