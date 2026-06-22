@@ -7,7 +7,7 @@ engineering assessment.
 
 > **Live demo:** https://ai-travel-planner-sage.vercel.app
 > **API:** https://ai-travel-planner-74ab.onrender.com
-> **Walkthrough video:** `<add your video link here>`
+> **Walkthrough video:** https://drive.google.com/file/d/1VzJkJZ2O8kyVmUH6TVmhd36rzv5BnrjA/view?usp=sharing
 
 ---
 
